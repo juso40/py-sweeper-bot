@@ -1,6 +1,7 @@
-import pyautogui
 import enum
 import random
+
+import pyautogui
 
 
 class GAME_STATES(enum.IntEnum):

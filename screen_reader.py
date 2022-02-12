@@ -1,8 +1,12 @@
-from typing import Dict, Iterable, List, Tuple, Union
+from typing import Dict
+from typing import Iterable
+from typing import List
+from typing import Tuple
+from typing import Union
 
-import PIL.ImageGrab as pig
 import cv2
 import numpy as np
+import PIL.ImageGrab as pig
 
 BoundingRect = Tuple[int, int, int, int]
 
@@ -19,7 +23,9 @@ def get_contours(img: np.ndarray) -> Tuple[np.ndarray, ...]:
     return contours
 
 
-def contours_to_rects(contours: Iterable[np.ndarray], n: int) -> Union[None, List[BoundingRect]]:
+def contours_to_rects(
+    contours: Iterable[np.ndarray], n: int
+) -> Union[None, List[BoundingRect]]:
     areas: Dict[int, List[float]] = {}
     for c in contours:
         areas.setdefault(cv2.contourArea(c), []).append(c)

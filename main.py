@@ -1,10 +1,10 @@
 import time
+import webbrowser
 
 import keyboard
 
-import screen_reader
 import mines_control
-import webbrowser
+import screen_reader
 
 HEIGHT = 16
 WIDTH = 30
